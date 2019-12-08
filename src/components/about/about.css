@@ -1,0 +1,38 @@
+.about-wrapper {
+    height: 100vh;
+    display: flex;
+    align-items: stretch;
+}
+
+.about-stage-1 {
+    background-color: var(--secondary);
+    width: 800px;
+    margin-left: 400px;
+}
+
+.stage-content {
+    height: 100%;
+    width: 200%;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.stage-images-box {
+    align-self: center;
+    position: relative;
+    height: 100%;
+}
+
+.stain-wrapper {
+    position: absolute;
+    width: 600px;
+    top: 35%;
+    left: 0;
+}
+
+.about-img-wrapper {
+    position: absolute;
+    width: 800px;
+    top: 20%;
+    left: 15%;
+}

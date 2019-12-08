@@ -1,0 +1,12 @@
+.nav {
+    margin-top: 10px;
+}
+
+.nav ul {
+    display: flex;
+}
+
+.nav a {
+    display: block;
+    padding: 20px;
+}
