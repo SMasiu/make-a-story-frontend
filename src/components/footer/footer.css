@@ -1,7 +1,7 @@
 .main-footer {
     background-color: var(--dark);
     color: var(--light);
-    padding-bottom: 20px;
+    padding-bottom: 40px;
 }
 
 .footer-content {
@@ -10,8 +10,13 @@
 }
 
 .main-footer h2 {
-    padding: 20px 0;
+    padding: 50px 0 10px 0;
     font-size: 3rem;
+}
+
+.footer-sect-wrapper {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
 }
 
 .contact-info {
@@ -23,6 +28,21 @@
     margin: 20px 0;
 }
 
+.footer-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-form > * {
+    margin-top: 25px;
+}
+
+.footer-submit {
+    display: flex;
+    justify-content: flex-end;
+}
+
 .footer-bootom {
-    padding: 20px 0;
+    padding: 3  0px 0;
+    text-align: center;
 }

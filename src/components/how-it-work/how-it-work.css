@@ -58,7 +58,7 @@
 .tile-img-wrapper {
     width: 70%;
     position: absolute;
-    bottom: 50px;
+    bottom: 30px;
     left: -100px;
 }
 
@@ -72,7 +72,7 @@
 .tile-1-btn-wrapper {
     position: absolute;
     right: 25px;
-    bottom: 50px;
+    bottom: 30px;
 }
 
 .tile-btn-wrapper {
@@ -80,6 +80,6 @@
     justify-content: flex-end;  
     width: 70%;
     position: absolute;
-    bottom: 50px;
+    bottom: 30px;
     left: 15%;
 }

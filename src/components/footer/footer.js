@@ -1,6 +1,7 @@
 import React from 'react';
 import './footer.css';
 import List from '../list/list';
+import Button from '../button/button';
 
 const Footer = () => (
     <footer className="main-footer">
@@ -30,8 +31,13 @@ const Footer = () => (
                         ]}/>
                     </div>
                 </article>
-                <form>
-
+                <form className="footer-form">
+                    <input placeholder="Name"/>
+                    <input placeholder="Email"/>
+                    <textarea placeholder="Message" rows="5"/>
+                    <div className="footer-submit">
+                        <Button secondary>Send</Button>
+                    </div>
                 </form>
             </div>
             <div className="footer-bootom">
