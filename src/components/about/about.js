@@ -1,6 +1,7 @@
 import React from 'react';
 import './about.css';
 import Box from '../box/box';
+import Button from '../button/button';
 
 const About = () => (
     <section className="about-wrapper">
@@ -12,12 +13,34 @@ const About = () => (
                     </div>
                     <div className="about-img-wrapper">
                         <Box>
-                            <img src="welcome.jpg" alt="about"/>
+                            <img src="about.jpeg" alt="about"/>
                         </Box>
                     </div>
                 </section>
-                <article>
-                    Our story
+                <article className="about-us-article">
+                    <div>
+                        <h3>Our</h3>
+                        <h3>story</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            At nihil, possimus vel consequuntur natus dolorem sit qui
+                            iure ut quis laborum accusantium ipsa nisi consequatur
+                            cumque alias quas delectus quae corporis est? Harum
+                            delectus aperiam, quod culpa dolorum iure, autem velit
+                            odit, nisi quia veritatis voluptatum! Obcaecati officia
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            At nihil, possimus vel consequuntur natus dolorem sit qui
+                            iure ut quis laborum accusantium ipsa nisi consequatur
+                            cumque alias quas delectus quae corporis est? Harum
+                            delectus aperiam, quod culpa dolorum iure, autem velit
+                            odit, nisi quia veritatis voluptatum! Obcaecati officia
+                        </p>
+                        <div className="about-button-wrapper">
+                            <Button>Join us</Button>
+                        </div>
+                    </div>
                 </article>
             </div>
         </div>

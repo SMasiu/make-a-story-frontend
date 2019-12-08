@@ -1,3 +1,7 @@
 .arr-wrapper {
     width: 20px;
 }
+
+.arr-wrapper svg * {
+    transition: all .3s;
+}

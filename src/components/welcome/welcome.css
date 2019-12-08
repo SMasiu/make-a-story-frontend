@@ -1,5 +1,6 @@
 .welcome-box {
     background-color: var(--primary);
+    min-height: 850px;
     height: calc(100vh - 100px);
     display: flex;
     align-items: stretch;

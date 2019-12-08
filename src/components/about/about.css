@@ -1,5 +1,6 @@
 .about-wrapper {
     height: 100vh;
+    min-height: 850px;
     display: flex;
     align-items: stretch;
 }
@@ -26,7 +27,7 @@
 .stain-wrapper {
     position: absolute;
     width: 600px;
-    top: 35%;
+    top: 30%;
     left: 0;
 }
 
@@ -35,4 +36,23 @@
     width: 800px;
     top: 20%;
     left: 15%;
+}
+
+.about-us-article {
+    display: flex;
+    align-items: center;
+}
+
+.about-us-article h3 {
+    font-size: 2.6rem;
+    text-transform: uppercase   ;
+}
+
+.about-us-article p {
+    margin: 20px 0;
+}
+
+.about-button-wrapper {
+    display: flex;
+    justify-content: flex-end;
 }
