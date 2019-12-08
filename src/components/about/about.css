@@ -8,12 +8,12 @@
 .about-stage-1 {
     background-color: var(--secondary);
     width: 800px;
-    margin-left: 400px;
+    margin-left: 20%;
 }
 
 .stage-content {
     height: 100%;
-    width: 200%;
+    width: 1500px;
     display: grid;
     grid-template-columns: 2fr 1fr;
 }
@@ -44,15 +44,16 @@
 }
 
 .about-us-article h3 {
-    font-size: 2.6rem;
+    font-size: 3rem;
     text-transform: uppercase   ;
 }
 
-.about-us-article p {
+.about-paragraph {
     margin: 20px 0;
 }
-
+ 
 .about-button-wrapper {
     display: flex;
     justify-content: flex-end;
+    margin: 20px 0;
 }

@@ -8,13 +8,25 @@
     display: flex;
     align-items: center;
     border: 2px solid var(--dark);
-    padding: 0 25px;
+    padding: 10px 25px;
 }
 
 .button-wrapper p {
     transition: all .3s;
     margin-right: 50px;
     color: var(--dark);
+}
+
+.btn-secondary .button-wrapper {
+    border-color: var(--primary);
+}
+
+.btn-secondary .button-wrapper p {
+    color: var(--primary);
+}
+
+.btn-container.btn-secondary svg * {
+    fill: var(--primary) !important;
 }
 
 .btn-container:hover {
@@ -31,4 +43,16 @@
 
 .btn-container:hover svg * {
     fill: var(--light) !important;
+}
+
+.btn-secondary:hover {
+    background-color: var(--primary);
+}
+
+.btn-secondary:hover p {
+    color: var(--dark);
+}
+
+.btn-secondary:hover svg * {
+    fill: var(--dark) !important;
 }

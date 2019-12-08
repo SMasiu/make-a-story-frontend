@@ -1,4 +1,6 @@
 .header-wrapper {
+    background-color: var(--light);
+    transition: all 1s;
     height: 100px;
     padding: 0 50px;
     display: flex;
@@ -6,6 +8,7 @@
     align-items: center;
     position: sticky;
     top: 0;
+    z-index: 1000;
 }
 
 .herader-left-box {
@@ -17,4 +20,27 @@
     display: block;
     padding: 20px 40px;
     margin-top: 10px;
+    transition: all 1s;
+}
+
+.header-nav-wrpper {
+    margin-top: 10px;
+    transition: all 1s;
+}
+
+.header-logo-wrapper {
+    transition: all 1s;
+    width: 200px;
+}
+
+.header-small {
+    height: 50px;
+}
+
+.header-small .herader-left-box a, .header-small .header-nav-wrpper {
+    margin-top: 0;  
+}
+
+.header-small .header-logo-wrapper {
+    width: 100px;
 }

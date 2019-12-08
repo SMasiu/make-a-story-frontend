@@ -1,0 +1,28 @@
+.main-footer {
+    background-color: var(--dark);
+    color: var(--light);
+    padding-bottom: 20px;
+}
+
+.footer-content {
+    width: 1500px;
+    margin: auto;
+}
+
+.main-footer h2 {
+    padding: 20px 0;
+    font-size: 3rem;
+}
+
+.contact-info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.contact-info h3 {
+    margin: 20px 0;
+}
+
+.footer-bootom {
+    padding: 20px 0;
+}

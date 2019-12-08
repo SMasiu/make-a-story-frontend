@@ -21,7 +21,7 @@ const About = () => (
                     <div>
                         <h3>Our</h3>
                         <h3>story</h3>
-                        <p>
+                        <p className="about-paragraph">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit.
                             At nihil, possimus vel consequuntur natus dolorem sit qui
                             iure ut quis laborum accusantium ipsa nisi consequatur
@@ -29,7 +29,7 @@ const About = () => (
                             delectus aperiam, quod culpa dolorum iure, autem velit
                             odit, nisi quia veritatis voluptatum! Obcaecati officia
                         </p>
-                        <p>
+                        <p className="about-paragraph">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit.
                             At nihil, possimus vel consequuntur natus dolorem sit qui
                             iure ut quis laborum accusantium ipsa nisi consequatur

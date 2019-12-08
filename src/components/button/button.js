@@ -3,8 +3,8 @@ import './button.css';
 
 import Arrow from '../arrow/arrow';
 
-const Button = ({children}) => (
-    <div className="btn-container">
+const Button = ({children, secondary}) => (
+    <div className={`btn-container ${secondary ? 'btn-secondary' : ''}`}>
         <div className="button-wrapper">
             <p>{children}</p>
             <Arrow/>
