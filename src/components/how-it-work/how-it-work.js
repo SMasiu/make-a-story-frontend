@@ -35,14 +35,14 @@ const HowItWork = () => (
             </section>
 
             <section className="tile-bg-2 tile">
-            <div className="tile-img-wrapper">
+                <div className="tile-img-wrapper">
                     <Box>
                         <div className="tile-image">
                             <img src="write.jpeg" alt="tile-img"/>
                         </div>
                     </Box>
-            </div>
-            <div className="tile-1-btn-wrapper">
+                </div>
+                <div className="tile-1-btn-wrapper">
                     <Button secondary>Add the fragment</Button>
                 </div>
             </section>

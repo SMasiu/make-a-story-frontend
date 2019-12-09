@@ -73,6 +73,10 @@
 }
 
 @media (max-width: 1900px) {
+    .content-stage-1 {
+        width: 600px;
+    }
+
     .content-stage-2 {
         left: 10%;
     }
@@ -82,23 +86,7 @@
     }
 }
 
-@media (max-width: 1650px) {
-    .content-stage-1 {
-        width: 50%;
-        margin-left: 25%;
-    }
-
-    .content-stage-2 {
-        left: -30%;
-        width: 1000px;
-    }
-
-    .s3-wrapper {
-        left: 75%;
-    }
-}
-
-@media (max-width: 1250px) {
+@media (max-width: 1350px) {
     .content-stage-1 {
         width: 60%;
         margin-left: 20%;
