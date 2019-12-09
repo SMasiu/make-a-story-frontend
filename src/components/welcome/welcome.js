@@ -7,9 +7,12 @@ import Arrow from '../arrow/arrow';
 const Welcome = () => (
     <section className="welcome-box">
         <div className="content-stage-1">
+            <footer className="stage-footer">
+                <img src="stain1.png" alt="stain" />
+            </footer>
             <div className="content-stage-2">
                 <Box>
-                    <img src="welcome.jpg" alt="wecome"/>
+                    <img src="welcome.jpg" alt="wecome" />
                 </Box>
             </div>
             <div className="s3-wrapper">
@@ -23,15 +26,11 @@ const Welcome = () => (
                         </div>
                         <div className="heading-footer">
                             <p>See more</p>
-                            <Arrow/>
+                            <Arrow />
                         </div>
                     </div>
                 </Box>
             </div>
-
-            <footer className="stage-footer">
-                <img src="stain1.png" alt="stain"/>
-            </footer>
         </div>
     </section>
 )

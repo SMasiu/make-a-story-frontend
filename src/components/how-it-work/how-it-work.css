@@ -31,6 +31,11 @@
     background-color: var(--primary);
 }
 
+.tile-bg-1, .tile-bg-2 {
+    display: flex;
+    align-items: center;
+}
+
 .tile-text {
     display: flex;
     justify-content: center;
@@ -58,7 +63,6 @@
 .tile-img-wrapper {
     width: 70%;
     position: absolute;
-    bottom: 30px;
     left: -100px;
 }
 

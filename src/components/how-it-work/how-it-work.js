@@ -25,7 +25,7 @@ const HowItWork = () => (
                 <div className="tile-img-wrapper">
                     <Box>
                         <div className="tile-image">
-                            <img src="welcome.jpg" alt="tile-img"/>
+                            <img src="read.jpeg" alt="tile-img"/>
                         </div>
                     </Box>
                 </div>
@@ -36,11 +36,11 @@ const HowItWork = () => (
 
             <section className="tile-bg-2 tile">
             <div className="tile-img-wrapper">
-                <Box>
-                    <div className="tile-image">
-                        <img src="welcome.jpg" alt="tile-img"/>
-                    </div>
-                </Box>
+                    <Box>
+                        <div className="tile-image">
+                            <img src="write.jpeg" alt="tile-img"/>
+                        </div>
+                    </Box>
             </div>
             <div className="tile-1-btn-wrapper">
                     <Button secondary>Add the fragment</Button>
@@ -77,7 +77,7 @@ const HowItWork = () => (
                 <div className="tile-img-wrapper-top">
                     <Box>
                         <div>
-                            <img src="welcome.jpg" alt="tile-img"/>
+                            <img src="vote.jpg" alt="tile-img"/>
                         </div>
                     </Box>
                 </div>

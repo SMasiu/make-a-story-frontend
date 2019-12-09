@@ -1,10 +1,12 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import './header.css';
 
 import Logo from '../logo/logo';
 import Nav from '../nav/nav';
 
 const Header = () => {
+
+    const [openNav, setOpenNav] = useState(false);
 
     useEffect(() => {
         window.addEventListener('scroll', (e) => {
@@ -22,17 +24,24 @@ const Header = () => {
         };
     }, [])
 
+    const toogleNav = () => {
+        setOpenNav(!openNav);
+    }
+
     return (
         <header className="header-wrapper main-header">
-            <div className="herader-left-box">
-                <div className="header-logo-wrapper">
-                    <Logo/>
+            <div className="header-logo-wrapper">
+                <Logo/>
+            </div>
+            <div className="hamb-wrapper">
+                <div className="hamb-inner-wrapper" onClick={toogleNav}>
+                    hamb
                 </div>
+            </div>
+            <div className={`header-nav-wrpper ${openNav ? 'header-nav-wrapper-open':''}`}>
                 <p>
                     <a href="index.html">Login</a>
                 </p>
-            </div>
-            <div className="header-nav-wrpper">
                 <Nav/>
             </div>
         </header>

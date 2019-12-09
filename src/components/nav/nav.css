@@ -3,6 +3,14 @@
 }
 
 .nav a {
+    text-align: center;
     display: block;
     padding: 20px;
+}
+
+@media (max-width: 900px) { 
+    .nav ul {
+        margin-top: 20px;
+        flex-direction: column;
+    }
 }
