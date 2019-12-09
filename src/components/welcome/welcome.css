@@ -1,7 +1,6 @@
 .welcome-box {
     background-color: var(--primary);
     min-height: 850px;
-    height: calc(100vh - 100px);
     display: flex;
     align-items: stretch;
 }
@@ -92,8 +91,8 @@
         margin-left: 20%;
     }
     .content-stage-2 {
-        width: 120%;
-        left: -10%;
+        width: 140%;
+        left: -20%;
         top: 100px;
     }
 
@@ -101,5 +100,33 @@
         left: auto;
         width: 420px;
         top: 300px;
+    }
+}
+
+@media (max-width: 500px) {
+    .welcome-box {
+        min-height: 600px;
+    }
+    .content-stage-1 {
+        width: 90%;
+        margin-left: 5%;
+    }
+    .content-stage-2 {
+        width: 110%;
+        left: -5%;
+    }
+    .s3-wrapper {
+        position: relative;
+        top: 0;
+        width: 90%;
+    }
+    .content-stage-3 {
+        height: auto;
+        width: auto;
+        padding: 10px;
+    }
+
+    .heading {
+        font-size: 2.5rem;
     }
 }

@@ -99,3 +99,29 @@
         padding: 25px;
     }
 }
+
+@media (max-width: 750px) {
+    
+    .hp-article {
+        padding: 50px;
+    }
+    
+    .hp-article header {
+        flex-direction: column;
+    }
+
+    .hp-article header h2 {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 500px) {
+    .hp-container {
+        width: 100%;
+    }
+
+    .hp-article {
+        padding: 35px 20px;
+        width: 90%;
+    }
+}

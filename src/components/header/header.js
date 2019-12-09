@@ -3,6 +3,7 @@ import './header.css';
 
 import Logo from '../logo/logo';
 import Nav from '../nav/nav';
+import Hamburger from '../hamburger/hamburger';
 
 const Header = () => {
 
@@ -35,7 +36,7 @@ const Header = () => {
             </div>
             <div className="hamb-wrapper">
                 <div className="hamb-inner-wrapper" onClick={toogleNav}>
-                    hamb
+                    <Hamburger/>
                 </div>
             </div>
             <div className={`header-nav-wrpper ${openNav ? 'header-nav-wrapper-open':''}`}>

@@ -12,9 +12,9 @@
     z-index: 1000;
 }
 
-.herader-left-box a {
+.header-nav-wrpper a {
     display: block;
-    padding: 20px 40px;
+    padding: 20px;
     transition: all 1s;
 }
 
@@ -59,13 +59,13 @@
         position: fixed;
         justify-content: center;
         top: 60px;
-        right: -100%;
+        left: 100%;
         z-index: 1000;
         background-color: var(--light);
-        transition: right .3s;
+        transition: left .3s;
     }
     .header-nav-wrapper-open {
-        right: 0;
+        left: 0;
     }
     .hamb-wrapper {
         display: block;
@@ -74,5 +74,8 @@
         display: flex;
         justify-content: flex-end;
         align-items: center;
+    }
+    .header-nav-wrpper a {
+        font-size: 3rem;
     }
 }

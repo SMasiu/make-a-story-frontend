@@ -10,7 +10,11 @@
 
 @media (max-width: 900px) { 
     .nav ul {
-        margin-top: 20px;
+        margin-top: 5px;
         flex-direction: column;
+    }
+
+    .nav a {
+        font-size: 3rem;
     }
 }
