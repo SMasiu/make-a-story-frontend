@@ -1,6 +1,5 @@
 import React from 'react';
 
-import Header from '../../components/header/header';
 import Welcome from '../../components/welcome/welcome';
 import About from '../../components/about/about';
 import HomeProduct from '../../components/home-product/home-product';
@@ -11,7 +10,6 @@ const Home = () => (
 
     <div className="container">
 
-        <Header/>
         <Welcome/>
         <About/>
         <HomeProduct/>

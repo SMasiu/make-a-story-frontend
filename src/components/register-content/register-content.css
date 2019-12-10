@@ -1,0 +1,19 @@
+.img-w-reg-1 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 400px;
+}
+
+.img-w-reg-3 {
+    position: absolute;
+    top: 0;
+    width: 600px;
+}
+
+.img-w-reg-2 {
+    width: 550px;
+    position: absolute;
+    top: 175px;
+    left: 300px;
+}

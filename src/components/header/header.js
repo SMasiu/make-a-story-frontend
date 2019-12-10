@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import './header.css';
+import {Link} from 'react-router-dom';
 
 import Logo from '../logo/logo';
 import Nav from '../nav/nav';
@@ -10,8 +11,18 @@ const Header = () => {
     const [openNav, setOpenNav] = useState(false);
 
     useEffect(() => {
-        window.addEventListener('scroll', (e) => {
-            let hedaer = document.querySelector('.main-header');
+        window.addEventListener('scroll', handleOnScroll)
+        return () => {
+            window.removeEventListener('scroll', handleOnScroll);
+        };
+    }, [])
+
+    const toogleNav = () => {
+        setOpenNav(!openNav);
+    }
+
+    const handleOnScroll = () => {
+        let hedaer = document.querySelector('.main-header');
             if(hedaer) {
                 if(hedaer.offsetTop === 0) {
                     hedaer.classList.remove('header-small');
@@ -19,14 +30,6 @@ const Header = () => {
                     hedaer.classList.add('header-small');
                 }
             }
-        })
-        return () => {
-            window.removeEventListener('scroll');
-        };
-    }, [])
-
-    const toogleNav = () => {
-        setOpenNav(!openNav);
     }
 
     return (
@@ -41,7 +44,7 @@ const Header = () => {
             </div>
             <div className={`header-nav-wrpper ${openNav ? 'header-nav-wrapper-open':''}`}>
                 <p>
-                    <a href="index.html">Login</a>
+                    <Link to="/login">Login</Link>
                 </p>
                 <Nav/>
             </div>

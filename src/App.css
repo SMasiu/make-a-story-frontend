@@ -41,7 +41,7 @@ a {
 input, textarea {
   border: 1px solid var(--light);
   background-color: transparent;
-  padding: 10px;
+  padding: 15px;
   color: var(--lihgt);
 }
 
@@ -52,4 +52,8 @@ textarea {
 input:focus, textarea:focus {
   outline: 2px solid var(--primary);
   border-color: var(--primary);
+}
+
+.inp-secondary {
+  border-color: var(--dark);
 }
