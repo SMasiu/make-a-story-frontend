@@ -1,12 +1,17 @@
-import React, {useEffect, useState} from 'react';
-import './header.css';
+import React, {useEffect, useState, useContext} from 'react';
 import {Link} from 'react-router-dom';
+import Context from '../../store/context';
+import './header.css';
 
 import Logo from '../logo/logo';
 import Nav from '../nav/nav';
 import Hamburger from '../hamburger/hamburger';
+import Axios from 'axios';
+import { url } from '../../api.conf';
 
 const Header = () => {
+
+    const {state, actions} = useContext(Context);
 
     const [openNav, setOpenNav] = useState(false);
 
@@ -23,13 +28,23 @@ const Header = () => {
 
     const handleOnScroll = () => {
         let hedaer = document.querySelector('.main-header');
-            if(hedaer) {
-                if(hedaer.offsetTop === 0) {
-                    hedaer.classList.remove('header-small');
-                } else {
-                    hedaer.classList.add('header-small');
-                }
+        if(hedaer) {
+            if(hedaer.offsetTop === 0) {
+                hedaer.classList.remove('header-small');
+            } else {
+                hedaer.classList.add('header-small');
             }
+        }
+    }
+
+    const logout = () => {
+        Axios.get(`${url}/user/logout`,{withCredentials: true})
+            .then( ({data}) => {
+                actions({type: 'user', payload: {}, command: 'clear'})
+            })
+            .catch( err => {
+                console.log(err);
+            });
     }
 
     return (
@@ -43,9 +58,7 @@ const Header = () => {
                 </div>
             </div>
             <div className={`header-nav-wrpper ${openNav ? 'header-nav-wrapper-open':''}`}>
-                <p>
-                    <Link to="/login">Login</Link>
-                </p>
+                {state.user.email ? <p onClick={logout}>{state.user.email}</p> : <p><Link to="/login">Login</Link></p>}
                 <Nav/>
             </div>
         </header>

@@ -1,9 +1,9 @@
 import React from 'react';
 import LoginContent from '../../components/login-content/login-content';
 
-const Login = () => (
+const Login = ({history}) => (
     <div>
-        <LoginContent/>
+        <LoginContent history={history}/>
     </div>
 )
 
