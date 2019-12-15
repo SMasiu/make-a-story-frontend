@@ -17,3 +17,10 @@
     top: 175px;
     left: 300px;
 }
+
+@media (max-width: 2000px) {
+    .img-w-1, .img-w-2, .img-w-3 {
+        position: static;
+        width: 350px;
+    }
+}

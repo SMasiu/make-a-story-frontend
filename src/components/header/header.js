@@ -29,7 +29,7 @@ const Header = () => {
     const handleOnScroll = () => {
         let hedaer = document.querySelector('.main-header');
         if(hedaer) {
-            if(hedaer.offsetTop === 0) {
+            if(hedaer.offsetTop <= 40) {
                 hedaer.classList.remove('header-small');
             } else {
                 hedaer.classList.add('header-small');
