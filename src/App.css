@@ -57,3 +57,7 @@ input:focus, textarea:focus {
 .inp-secondary {
   border-color: var(--dark);
 }
+
+.page-wrapper {
+  margin-top: 100px;
+}

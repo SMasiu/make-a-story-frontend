@@ -1,0 +1,13 @@
+.fragment-wrapper {
+    margin: 25px;
+}
+
+.fragment-footer {
+    text-align: right;
+}
+
+.fragment-footer p {
+    font-size: 1.3rem;
+    font-style: italic;
+    color: var(--secondary-dark);
+}

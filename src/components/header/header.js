@@ -27,12 +27,12 @@ const Header = () => {
     }
 
     const handleOnScroll = () => {
-        let hedaer = document.querySelector('.main-header');
-        if(hedaer) {
-            if(hedaer.offsetTop <= 40) {
-                hedaer.classList.remove('header-small');
+        const header = document.querySelector('.main-header');
+        if(header) {
+            if(window.scrollY <= 30) {
+                header.classList.remove('header-small');
             } else {
-                hedaer.classList.add('header-small');
+                header.classList.add('header-small');
             }
         }
     }

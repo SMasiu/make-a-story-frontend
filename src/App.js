@@ -1,15 +1,17 @@
 import React, { useEffect, useContext, useState } from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
+import Axios from 'axios';
 import './App.css';
-import Context from './store/context';
+import { url } from './api.conf';
 
+import Context from './store/context';
 import Home from './pages/home/home';
 import Login from './pages/login/login';
 import Register from './pages/register/register';
 import Stories from './pages/stories/stories';
+import ReadBook from './pages/read-book/read-book';
 import Header from './components/header/header';
-import Axios from 'axios';
-import { url } from './api.conf';
+import Footer from './components/footer/footer';
 
 function App() {
 
@@ -38,10 +40,14 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Header />
-        <Route exact path="/" component={Home} />
-        <Route path="/login" component={Login} />
-        <Route path="/register" component={Register} />
-        <Route path="/stories" component={Stories} />
+        <div className="page-wrapper">
+          <Route exact path="/" component={Home} />
+          <Route path="/login" component={Login} />
+          <Route path="/register" component={Register} />
+          <Route path="/stories" component={Stories} />
+          <Route path="/read-book/:storyId" component={ReadBook} />
+        </div>
+        <Footer />
       </BrowserRouter>
     </div>
   );
