@@ -9,8 +9,9 @@ const ReadBook = () => {
 
     const { actions, state } = useContext(Context);
     const [get, setGet] = useState(false);
+    const [count, setCount] = useState(0);
     const {storyId} = useParams();
-    
+
     useEffect(() => {
         if(!get) {
             if(!(state.fragments[storyId] && state.fragments[storyId].content.length)) {
@@ -18,17 +19,26 @@ const ReadBook = () => {
                 .then(({data}) => {
                     setGet(true);
                     actions({type: 'fragment', payload: data, command: {storyId}})
+
+                    Axios.get(`${url}/fragments/count/${storyId}`)
+                        .then( ({data}) => {
+                            setCount(data.count);
+                        })
+                        .catch( err => {
+                            console.log(err);
+                        });
+
                 })
                 .catch( err => {
                     console.log(err)
                 })
             }
         }
-    },[get, actions, storyId, state.fragments]);
+    },[get, actions, storyId, state.fragments, count]);
 
     return (
         <section>
-            <FragmentList storyId="1"/>
+            <FragmentList storyId={storyId} count={count}/>
         </section>
     )
 

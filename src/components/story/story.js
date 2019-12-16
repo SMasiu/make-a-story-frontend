@@ -23,9 +23,12 @@ const Story = ({ story, number }) => {
                     <p>{story.description}</p>
                 </div>
                 <footer>
-                    <Link to={`/read-book/${story.id}`}>
-                        <Button>Read</Button>
-                    </Link>
+                    <div className="btn-group">
+                        <Button>News</Button>
+                        <Link to={`/read-book/${story.id}`}>
+                            <Button>Read</Button>
+                        </Link>
+                    </div>
                 </footer>
             </section>
             <section className="story-cover">
