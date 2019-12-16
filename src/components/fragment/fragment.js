@@ -7,7 +7,7 @@ const Fragment = ({fragment}) => (
             {fragment.content}
         </p>
         <footer className="fragment-footer">
-            <p>{fragment.author} {new Date(fragment['pub_date']).toDateString()}</p>
+            <p>{fragment.nick} {new Date(fragment['pub_date']).toDateString()}</p>
         </footer>
     </article>
 )

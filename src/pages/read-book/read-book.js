@@ -7,13 +7,14 @@ import FragmentList from '../../components/fragment-list/fragment-list';
 
 const ReadBook = () => {
 
-    const { actions } = useContext(Context);
+    const { actions, state } = useContext(Context);
     const [get, setGet] = useState(false);
     const {storyId} = useParams();
-
+    
     useEffect(() => {
         if(!get) {
-            Axios.get(`${url}/fragments/${storyId}`)
+            if(!(state.fragments[storyId] && state.fragments[storyId].content.length)) {
+                Axios.get(`${url}/fragments/${storyId}`)
                 .then(({data}) => {
                     setGet(true);
                     actions({type: 'fragment', payload: data, command: {storyId}})
@@ -21,8 +22,9 @@ const ReadBook = () => {
                 .catch( err => {
                     console.log(err)
                 })
+            }
         }
-    },[get, actions, storyId]);
+    },[get, actions, storyId, state.fragments]);
 
     return (
         <section>

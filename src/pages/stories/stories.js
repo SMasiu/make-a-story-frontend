@@ -7,22 +7,21 @@ import { url } from '../../api.conf';
 
 const Stories = () => {
 
-    const {actions} = useContext(Context);
+    const {actions, state} = useContext(Context);
     const [get, setGet] = useState(false);
 
     useEffect(() => {
-        if(!get) {
+        if(!get && !state.stories.length) {
         Axios.get(`${url}/stories`) 
             .then(({data}) => {
                 setGet(true);
-                console.log('settting...')
                 return actions({type: 'story', payload: data});
             })
             .catch( err => {
                 console.log(err)
             });
         }
-    },[actions, get]);
+    },[actions, get, state.stories]);
 
     return (
         <div>
