@@ -1,0 +1,8 @@
+.stories-outer-wrapper {
+    background-color: var(--primary);
+}
+
+.stories-inner-wrapper {
+    width: 1600px;
+    
+}

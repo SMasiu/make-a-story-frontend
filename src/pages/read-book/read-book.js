@@ -4,6 +4,7 @@ import Context from '../../store/context';
 import Axios from 'axios';
 import { url } from '../../api.conf';
 import FragmentList from '../../components/fragment-list/fragment-list';
+import './read-book.css';
 
 const ReadBook = () => {
 
@@ -37,8 +38,10 @@ const ReadBook = () => {
     },[get, actions, storyId, state.fragments, count]);
 
     return (
-        <section>
-            <FragmentList storyId={storyId} count={count}/>
+        <section className="read-book-wrapper">
+            <div className="read-book-inner-wrapper">
+                <FragmentList storyId={storyId} count={count}/>
+            </div>
         </section>
     )
 

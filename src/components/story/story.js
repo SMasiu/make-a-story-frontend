@@ -24,7 +24,9 @@ const Story = ({ story, number }) => {
                 </div>
                 <footer>
                     <div className="btn-group">
-                        <Button>News</Button>
+                        <Link to={`/news/${story.id}`}>
+                            <Button>News</Button>
+                        </Link>
                         <Link to={`/read-book/${story.id}`}>
                             <Button>Read</Button>
                         </Link>

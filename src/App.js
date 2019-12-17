@@ -12,6 +12,8 @@ import Stories from './pages/stories/stories';
 import ReadBook from './pages/read-book/read-book';
 import Header from './components/header/header';
 import Footer from './components/footer/footer';
+import News from './pages/news/news';
+import AddNewFragment from './pages/add-new-fragment/add-new-fragment';
 
 function App() {
 
@@ -46,6 +48,8 @@ function App() {
           <Route path="/register" component={Register} />
           <Route path="/stories" component={Stories} />
           <Route path="/read-book/:storyId" component={ReadBook} />
+          <Route path="/news/:storyId" component={News} />
+          <Route path="/add-new-fragment/:storyId" component={AddNewFragment} />
         </div>
         <Footer />
       </BrowserRouter>

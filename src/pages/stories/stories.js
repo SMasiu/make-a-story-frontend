@@ -4,6 +4,7 @@ import Context from '../../store/context';
 import StoriesList from '../../components/stories-list/stories-list';
 import Axios from 'axios';
 import { url } from '../../api.conf';
+import './stories.css';
 
 const Stories = () => {
 

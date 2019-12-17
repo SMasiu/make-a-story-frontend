@@ -1,0 +1,29 @@
+.news-outer-wrapper {
+    background-color: var(--primary);
+}
+
+.news-wrapper {
+    width: 1200px;
+    margin: auto;
+    min-height: 850px;
+    background-color: var(--light);
+    padding: 0 50px;
+}
+
+.news-wrapper h1 {
+    font-size: 4rem;
+}
+
+.news-header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 25px 0;
+}
+
+.news-empty {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 650px;
+}

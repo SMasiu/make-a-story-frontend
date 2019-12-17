@@ -56,7 +56,7 @@ const FragmentList = ({storyId, count}) => {
         <section className="fragment-list-wrapper">
             <h1>{title}</h1>
             {filterFragments()}
-            <footer className="fragment-lift-footer">
+            <footer className="fragment-list-footer">
                 <div onClick={handlePrevious}>
                     <Button>Previous</Button>
                 </div>
