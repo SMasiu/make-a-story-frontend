@@ -13,7 +13,7 @@ const Stories = () => {
 
     useEffect(() => {
         if(!get && !state.stories.length) {
-        Axios.get(`${url}/stories`) 
+        Axios.get(`${url}/stories`, {withCredentials: true}) 
             .then(({data}) => {
                 setGet(true);
                 return actions({type: 'story', payload: data});

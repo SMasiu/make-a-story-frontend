@@ -7,7 +7,7 @@
     margin: auto;
     min-height: 850px;
     background-color: var(--light);
-    padding: 0 50px;
+    padding: 25px 50px;
 }
 
 .news-wrapper h1 {
@@ -26,4 +26,11 @@
     align-items: center;
     justify-content: center;
     min-height: 650px;
+}
+
+.news-footer {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }

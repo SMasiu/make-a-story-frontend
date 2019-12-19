@@ -1,7 +1,7 @@
 import {useState} from 'react';
 
 const useGlobalState = () => {
-    const [state, setState] = useState({user: {}, stories: [], fragments: {}});
+    const [state, setState] = useState({user: {}, stories: [], fragments: {}, newFragments: {}});
 
     const userResolver = (payload, command) => {
         if(command === 'clear') {
@@ -26,15 +26,30 @@ const useGlobalState = () => {
             content: [...fragments[storyId].content, ...payload],
             offset: fragments[storyId].offset + payload.length
         };
+        return setState({...state, fragments});
+    }
 
-        return setState({...state, ...fragments});
+    const newFragmentResolver = (payload, command) => {
+        const { storyId } = command;
+        let fragments = state.newFragments;
+        if(!fragments[storyId]) {
+            fragments[storyId] = { offset: 0, content: [] }
+        }
+
+        fragments[storyId] = {
+            content: [...fragments[storyId].content, ...payload],
+            offset: fragments[storyId].offset + payload.length
+        };
+
+        return setState({...state, newFragments: fragments});
     }
     
     
     const resolvers = {
         user: userResolver,
         story: storyResolver,
-        fragment: fragmentResolver
+        fragment: fragmentResolver,
+        newFragment: newFragmentResolver
     }
     
     const actions = ({type, payload, command}) => {

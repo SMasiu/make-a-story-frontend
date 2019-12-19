@@ -16,7 +16,7 @@ const ReadBook = () => {
     useEffect(() => {
         if(!get) {
             if(!(state.fragments[storyId] && state.fragments[storyId].content.length)) {
-                Axios.get(`${url}/fragments/${storyId}`)
+                Axios.get(`${url}/fragments/${storyId}`, {withCredentials: true})
                 .then(({data}) => {
                     setGet(true);
                     actions({type: 'fragment', payload: data, command: {storyId}})
