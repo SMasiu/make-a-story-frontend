@@ -4,7 +4,7 @@ import List from '../list/list';
 import Button from '../button/button';
 
 const Footer = () => (
-    <footer className="main-footer">
+    <footer className="main-footer" id="contact-main">
         <section className="footer-content">
             <h2>Conact</h2>
 

@@ -1,8 +1,9 @@
 import React, { useEffect, useContext, useState } from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { Router, Route} from 'react-router-dom';
 import Axios from 'axios';
 import './App.css';
 import { url } from './api.conf';
+import {createBrowserHistory} from 'history';
 
 import Context from './store/context';
 import Home from './pages/home/home';
@@ -14,6 +15,11 @@ import Header from './components/header/header';
 import Footer from './components/footer/footer';
 import News from './pages/news/news';
 import AddNewFragment from './pages/add-new-fragment/add-new-fragment';
+
+const history = createBrowserHistory();
+history.listen(_ => {
+  window.scrollTo(0, 0)  
+})
 
 function App() {
 
@@ -40,7 +46,7 @@ function App() {
 
   return (
     <div className="App">
-      <BrowserRouter>
+      <Router history={history}>
         <Header />
         <div className="page-wrapper">
           <Route exact path="/" component={Home} />
@@ -52,7 +58,7 @@ function App() {
           <Route path="/add-new-fragment/:storyId" component={AddNewFragment} />
         </div>
         <Footer />
-      </BrowserRouter>
+      </Router>
     </div>
   );
 }

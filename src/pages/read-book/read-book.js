@@ -1,5 +1,6 @@
 import React, {useContext, useEffect, useState} from 'react';
 import { useParams } from "react-router";
+import { Link } from 'react-router-dom';
 import Context from '../../store/context';
 import Axios from 'axios';
 import { url } from '../../api.conf';
@@ -40,6 +41,9 @@ const ReadBook = () => {
     return (
         <section className="read-book-wrapper">
             <div className="read-book-inner-wrapper">
+                <Link to="/stories">
+                    <p>Back</p>
+                </Link>
                 <FragmentList storyId={storyId} count={count}/>
             </div>
         </section>
