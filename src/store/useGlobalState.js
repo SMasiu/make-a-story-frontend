@@ -1,13 +1,13 @@
 import {useState} from 'react';
 
 const useGlobalState = () => {
-    const [state, setState] = useState({user: {}, stories: [], fragments: {}, newFragments: {}});
+    const [state, setState] = useState({user: {}, stories: [], fragments: {}, newFragments: {}, votes: []});
 
     const userResolver = (payload, command) => {
         if(command === 'clear') {
             return setState({...state, user: {}});
         } else {
-            return setState({...state, user: {...state.user, ...payload}});
+            return setState({...state, user: {...state.user, ...payload}, votes: [...state.votes]});
         }
     }
 
@@ -44,12 +44,18 @@ const useGlobalState = () => {
         return setState({...state, newFragments: fragments});
     }
     
-    
+    const votesResolver = (payload, command) => {
+        if(payload) {
+            return setState({...state, votes: [...payload]})
+        }
+    }
+
     const resolvers = {
         user: userResolver,
         story: storyResolver,
         fragment: fragmentResolver,
-        newFragment: newFragmentResolver
+        newFragment: newFragmentResolver,
+        vote: votesResolver
     }
     
     const actions = ({type, payload, command}) => {

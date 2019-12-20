@@ -5,7 +5,7 @@ import './news.css';
 import Context from '../../store/context';
 import Axios from 'axios';
 import { url } from '../../api.conf';
-import Fragment from '../../components/fragment/fragment';
+import VoteFragment from '../../components/vote-fragment/vote-fragment';
 
 const News = () => {
 
@@ -20,20 +20,23 @@ const News = () => {
         if(!get) {
             setGet(true);
             const queries = [
-                Axios.get(`${url}/news/${storyId}`),
-                Axios.get(`${url}/news/count/${storyId}`)
+                Axios.get(`${url}/news/${storyId}`, {withCredentials: true}),
+                Axios.get(`${url}/news/count/${storyId}`, {withCredentials: true}),
+                Axios.get(`${url}/votes`, {withCredentials: true})
             ];
-
-            Promise.all(queries)
-                .then( (response) => {
-                    const {count} = response[1].data;
-                    setCount(count);
-                    const {data} = response[0];
-                    actions({type: 'newFragment', payload: data, command: {storyId}});
-                })
-                .catch( err => {
-                    console.log(err)
-                })
+            setTimeout(() => {
+                Promise.all(queries)
+                    .then( (response) => {
+                        const {count} = response[1].data;
+                        setCount(count);
+                        const {data} = response[0];
+                        actions({type: 'newFragment', payload: data, command: {storyId}});
+                        actions({type: 'vote', payload: response[2].data});
+                    })
+                    .catch( err => {
+                        console.log(err)
+                    })
+            }, 50)
         }
     }, [count, actions, storyId, get])
 
@@ -69,9 +72,12 @@ const News = () => {
         let offset = (page - 1) * frOnPage;
         return fr ? fr.content
             .filter( (f, i) => !(i < offset || i > offset + frOnPage - 1) )
-            .map( (f, i) => <Fragment key={i} fragment={f} /> ) : <></>
+            .map( (f, i) => <VoteFragment 
+                key={i}
+                fragment={f}/> 
+            ) : <></>
     }
-
+    
     return (
         <div className="news-outer-wrapper">
             <section className="news-wrapper">

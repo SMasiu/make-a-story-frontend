@@ -1,0 +1,23 @@
+.vote-fragment-wrapper {
+    margin: 25px 0;
+    display: grid;
+    grid-template-columns: auto 50px;
+    gap: 25px;
+}
+
+.vote-fragment-footer {
+    text-align: right;
+}
+
+.vote-fragment-footer p {
+    font-size: 1.3rem;
+    font-style: italic;
+    color: var(--secondary-dark);
+}
+
+.vote-star {
+    width: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
