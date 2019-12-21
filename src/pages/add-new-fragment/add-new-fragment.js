@@ -3,10 +3,12 @@ import Button from '../../components/button/button';
 import './add-new-fragment.css';
 import Axios from 'axios';
 import { url } from '../../api.conf';
-import {useParams} from 'react-router-dom';
+import {useParams, useHistory} from 'react-router-dom';
 
 const AddNewFragment = () => {
 
+
+    const histary = useHistory();
     const [content, setContent] = useState('');
     const {storyId} = useParams();
 
@@ -14,8 +16,8 @@ const AddNewFragment = () => {
         e.preventDefault();
         
         Axios.post(`${url}/news`, {content, storyId}, {withCredentials: true})
-            .then( ({data}) => {
-                console.log(data)
+            .then( () => {
+                histary.push(`/news/${storyId}`);
             })
             .catch( err => {
                 console.log(err);

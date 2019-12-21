@@ -8,6 +8,7 @@ import Nav from '../nav/nav';
 import Hamburger from '../hamburger/hamburger';
 import Axios from 'axios';
 import { url } from '../../api.conf';
+import history from '../../history';
 
 const Header = () => {
 
@@ -16,7 +17,12 @@ const Header = () => {
     const [openNav, setOpenNav] = useState(false);
 
     useEffect(() => {
-        window.addEventListener('scroll', handleOnScroll)
+        window.addEventListener('scroll', handleOnScroll);
+
+        history.listen( () => {
+            setOpenNav(false);
+        })
+
         return () => {
             window.removeEventListener('scroll', handleOnScroll);
         };
@@ -54,7 +60,7 @@ const Header = () => {
             </div>
             <div className="hamb-wrapper">
                 <div className="hamb-inner-wrapper" onClick={toogleNav}>
-                    <Hamburger/>
+                    <Hamburger open={openNav}/>
                 </div>
             </div>
             <div className={`header-nav-wrpper ${openNav ? 'header-nav-wrapper-open':''}`}>

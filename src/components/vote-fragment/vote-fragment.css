@@ -21,3 +21,14 @@
     display: flex;
     align-items: center;
 }
+
+@media (max-width: 550px) {
+    .vote-fragment-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .vote-star {
+        grid-row: 1;
+        justify-self: center;
+    }
+}

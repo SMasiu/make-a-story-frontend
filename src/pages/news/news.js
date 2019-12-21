@@ -83,13 +83,14 @@ const News = () => {
             <section className="news-wrapper">
                 <header className="news-header">
                     <Link to="/stories">
-                        <p>Back</p>
+                        <p className="back">Back</p>
                     </Link>
                     <Link to={`/add-new-fragment/${storyId}`}>
                         <Button>Add new fragment</Button>
                     </Link>
                 </header>
-                {!state.newFragments[storyId] ? 
+                
+                {!state.newFragments[storyId] || !state.newFragments[storyId].content.length ? 
 
                     <div className="news-empty">
 

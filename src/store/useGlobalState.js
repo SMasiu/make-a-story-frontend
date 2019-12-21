@@ -26,6 +26,7 @@ const useGlobalState = () => {
             content: [...fragments[storyId].content, ...payload],
             offset: fragments[storyId].offset + payload.length
         };
+
         return setState({...state, fragments});
     }
 
@@ -40,6 +41,20 @@ const useGlobalState = () => {
             content: [...fragments[storyId].content, ...payload],
             offset: fragments[storyId].offset + payload.length
         };
+
+        let con = fragments[storyId].content;
+        let ids = [];
+
+        con = con.filter( c => {
+            let index = ids.findIndex( i => i === c.id );
+            if(index === -1) {
+                ids.push(c.id);
+                return true;
+            }
+            return false;
+        })
+
+        fragments[storyId].content = con;
 
         return setState({...state, newFragments: fragments});
     }

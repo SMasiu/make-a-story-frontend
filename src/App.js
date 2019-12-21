@@ -3,7 +3,6 @@ import { Router, Route} from 'react-router-dom';
 import Axios from 'axios';
 import './App.css';
 import { url } from './api.conf';
-import {createBrowserHistory} from 'history';
 
 import Context from './store/context';
 import Home from './pages/home/home';
@@ -15,10 +14,10 @@ import Header from './components/header/header';
 import Footer from './components/footer/footer';
 import News from './pages/news/news';
 import AddNewFragment from './pages/add-new-fragment/add-new-fragment';
+import history from './history';
 
-const history = createBrowserHistory();
 history.listen(_ => {
-  window.scrollTo(0, 0)  
+  window.scrollTo(0, 0);
 })
 
 function App() {

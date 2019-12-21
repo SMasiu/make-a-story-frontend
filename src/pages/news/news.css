@@ -3,7 +3,8 @@
 }
 
 .news-wrapper {
-    width: 1200px;
+    width: 90%;
+    max-width: 1200px;
     margin: auto;
     min-height: 850px;
     background-color: var(--light);
@@ -33,4 +34,20 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+@media (max-width: 600px) {
+    .news-footer {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 25px;
+        justify-items: center;
+    }
+    .news-header {
+        flex-direction: column;
+    }
+
+    .news-header p.back {
+        margin-bottom: 25px;
+    }
 }

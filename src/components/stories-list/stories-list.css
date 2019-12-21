@@ -3,3 +3,9 @@
     margin: auto;
     padding-bottom: 50px;
 }
+
+@media (max-width: 1700px) {
+    .stories-list-wrapper {
+        width: 90%;
+    }
+}
